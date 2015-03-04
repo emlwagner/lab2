@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.UUID;
 
-public class Deck extends Card {
+public class Deck {
 
 	private UUID DeckNbr;
 	private ArrayList<Card> DeckCards = new ArrayList<Card>(); 
 	
-	private Deck() {
+	public  Deck() {
 		this.DeckNbr = UUID.randomUUID();
 		for(int i = 0; i < 4; i++) {
 			eSuit suit = eSuit.values()[i];

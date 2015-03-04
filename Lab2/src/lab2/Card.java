@@ -4,8 +4,8 @@ public class Card {
 	private eCardValue value;
 	private eSuit suit;
 	
-	private Card(){
-	}
+	/*private Card(){
+	}*/
 	
 	
 	public Card(eSuit suit, eCardValue value) {

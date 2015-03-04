@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Hand extends Deck {
+public class Hand {
 	
 	private Deck deck = new Deck();
 	private ArrayList<Card> hand = new ArrayList<Card>();
@@ -46,6 +46,28 @@ public class Hand extends Deck {
 		}
 		return true;
 	}
+	
+	public int isRoyalFlush (ArrayList<Card> myHand) {
+		ArrayList<Card> hand = sort(myHand);
+		int i = 0;
+		Card c0 = hand.get(0);
+		eCardValue jack = eCardValue.values()[9];
+		if(c0.getValue() == jack) {
+			while(i < 4) {
+				Card c1 = hand.get(i);
+				Card c2 = hand.get(i+1);
+				if(c1.getSuit() == c2.getSuit()) {
+					continue;
+				}
+			return 10;
+				
+			}	
+		}
+		else {
+			return 0;
+		}
+	}
+	
 	
 	public boolean isFlush(ArrayList<Card> myHand) {
 		ArrayList<Card> hand = sort(myHand);
